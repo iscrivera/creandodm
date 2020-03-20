@@ -1,18 +1,3 @@
-@font-face {
-  font-family: "EndzoneSans-Bold";
-  src: url(../../../assets/fonts/EndzoneSans-Bold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "EndzoneSans-Medium";
-  src: url(../../../assets/fonts/EndzoneSans-Medium.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "NewslabBlack";
-  src: url(../../../assets/fonts/NewslabBlack.ttf) format("truetype");
-}
-
 ::ng-deep div#rule span.oro {
   color: #e6aa29;
 }
@@ -22,6 +7,10 @@
   clear: both;
   display: table;
   width: 100%;
+
+  .col-footer {
+    padding: 0;
+  }
 
   .btn-primary {
     border-radius: 20px;
@@ -233,7 +222,7 @@
   }
 
   .ranking {
-    height: 770px;
+    height: 763px;
     margin-top: -787px;
     z-index: 0;
 
@@ -315,7 +304,7 @@
       .header-r {
         border-radius: 0px 10px 10px 0px;
         background-color: #218115;
-        width: 78%;
+        width: 71%;
         padding: 6px;
         font-family: EndzoneSans-Bold;
         font-size: 3vw;
@@ -339,7 +328,7 @@
         .content-r {
           border-radius: 0px 10px 10px 0px;
           background-color: #0e3805;
-          width: 77%;
+          width: 70%;
           float: left;
           margin: 1vw 0vw 0vw 0vw;
           /* font-size: 3vw; */
@@ -387,14 +376,6 @@
       text-align: center;
       padding: 1vw 10vw 1vw 10vw;
     }
-  }
-
-  .col-footer {
-    background-color: #000;
-    color: #ffffff;
-    font-family: EndzoneSans-Medium;
-    text-align: center;
-    font-size: 2vw;
   }
 }
 
