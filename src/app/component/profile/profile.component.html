@@ -1,0 +1,36 @@
+<div class="profile-container">
+    <div class="col-logo">
+        <div class="logos">
+            <img class="img-logos" src="assets/images/logos.png" />
+        </div>
+        <div class="avatar">
+            <img class="img-sign" src="assets/images/session.svg" />
+            <button class="btn-secondary" (click)="goToHome()">Cerrar Sesión</button>
+        </div>
+    </div>
+    <div class="col-title">
+        <span class="title">Hola, <span class="oro">{{user.name}}</span></span>
+        <div class="sub">{{profile.subtitle}}</div>
+    </div>
+    <div class="col-tickets">
+        <div class="col-y-ticket oro">{{profile.yticket}}</div>
+        <div class="col-n-ticket">{{profile.nticket}}</div>
+        <div class="col-l-tickets">
+            <div class="ticket" *ngFor="let ticket of user.tickets">
+                <button class="collap">{{ticket.number}}</button>
+                <div class="cont">
+                    <div class="date">
+                        <div>Fecha y hora de ingreso</div>
+                        <div>{{ticket.date}}</div>
+                    </div>
+                    <div class="status">
+                        <div>Estatus</div>
+                        <div class="status-{{ticket.status}}">{{ticket.statusd}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-position"></div>
+    <div class="col-buttons"></div>
+</div>

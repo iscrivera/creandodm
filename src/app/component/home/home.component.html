@@ -4,8 +4,8 @@
             <img class="img-logos" src="assets/images/logos.png" />
         </div>
         <div class="col-sign sign">
-            <button class="btn-sign" (click)="login()">Iniciar Sesión</button>
-            <img class="img-sign" (click)="login()" src="assets/images/sesion.svg" />
+            <button class="btn-sign" (click)="goToProfile()">Iniciar Sesión</button>
+            <img class="img-sign" (click)="goToProfile()" src="assets/images/sesion.svg" />
         </div>
         <div class="col-slogan slogan">
 
@@ -36,9 +36,9 @@
                 <div class="col-l-slogan">
                 </div>
                 <div class="col-c-slogan">
-                    <div class="col-middle right"><button class="btn-secondary" (click)="login()">Ingresar
+                    <div class="col-middle right"><button class="btn-secondary" (click)="goToTicket()">Ingresar
                             Ticket</button></div>
-                    <div class="col-middle left"><button class="btn-primary" (click)="login()">Descubre Cómo</button>
+                    <div class="col-middle left"><button class="btn-primary">Descubre Cómo</button>
                     </div>
                 </div>
                 <div class="col-r-logosd">
@@ -50,8 +50,8 @@
             <img class="img-pet" src="assets/images/ruffilio_1.png" />
         </div>
     </div>
-    <div class="col-mecanica mecanicabg" ></div>
-    <div class="col-mecanica mecanica" >
+    <div class="col-mecanica mecanicabg"></div>
+    <div class="col-mecanica mecanica">
         <div class="col-m-title" id="mecanica">
             <img class="img-m-title" src="assets/images/mecanica.svg" />
         </div>
@@ -71,7 +71,7 @@
             </a>
         </div>
         <div class="col-m-btn">
-            <button class="btn-secondary" (click)="login()">Ingresar Ticket</button>
+            <button class="btn-secondary" (click)="goToTicket()">Ingresar Ticket</button>
         </div>
     </div>
 
@@ -116,11 +116,11 @@
         </div>
         <div class="col-r-page">
             <div class="col-r page-l">
-                <button class="btn-back" (click)="login()">Anterior</button>
+                <button class="btn-back">Anterior</button>
             </div>
             <div class="col-r page-c">1 2 3 4 5 ...</div>
             <div class="col-r page-r">
-                <button class="btn-oro" (click)="login()">Siguiente</button>
+                <button class="btn-oro">Siguiente</button>
             </div>
         </div>
         <div class="up">
@@ -130,5 +130,4 @@
         </div>
         <div class="col-r-footer">{{messages.ranking.footer}}</div>
     </div>
-    <div class="col-footer"><app-footer></app-footer></div>
 </div>

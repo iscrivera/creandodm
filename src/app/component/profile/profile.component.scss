@@ -1,0 +1,129 @@
+.profile-container {
+  content: "";
+  clear: both;
+  display: table;
+  width: 100%;
+  background-image: url("../../../assets/images/bg_mecanica_mob.png");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position-x: center;
+  background-position-y: bottom;
+  height: 226vw;
+
+  .btn-secondary {
+    border-radius: 20px;
+    display: block;
+    background-color: #cc163a;
+    color: #fff;
+    border: none;
+    padding: 4% 7% 4% 7%;
+    font-size: 3vw;
+    font-family: EndzoneSans-Medium;
+  }
+
+  .oro {
+    color: #e6aa29;
+  }
+
+  .logos {
+    padding: 2%;
+    width: 60%;
+    float: left;
+    .img-logos {
+      height: 20vw;
+    }
+  }
+
+  .avatar {
+    height: 15vw;
+    float: right;
+    padding-right: 5vw;
+    width: 25%;
+    text-align: right;
+    .img-sign {
+      height: 15vw;
+    }
+  }
+  .col-title {
+    text-align: center;
+    color: #fff;
+    .title {
+      font-size: 5vw;
+      font-family: NewslabBlack;
+    }
+
+    .sub {
+      font-family: EndzoneSans-Medium;
+      font-size: 3vw;
+    }
+  }
+
+  .col-tickets {
+    .col-y-ticket {
+      font-family: NewslabBlack;
+    }
+
+    .col-n-ticket {
+      font-family: EndzoneSans-Medium;
+    }
+
+    .col-l-tickets {
+      .ticket {
+        margin-bottom: 1vw;
+      }
+    }
+  }
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 2vw 2vw 2vw 2vw;
+  border: 1px solid #ffffff;
+  width: 95%;
+}
+
+.collap {
+  background-color: #1f1f1f;
+  color: #979797;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-family: EndzoneSans-Medium;
+}
+
+.active,
+.collap:hover {
+  background-color: #051704;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.collap:after {
+  content: "\02C5";
+  color: #979797;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\02C4";
+}
+
+.cont {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #051704;
+  color: #979797;
+  text-align: center;
+  font-family: EndzoneSans-Medium;
+}
+
+@media only screen and (min-width: 750px) {
+}

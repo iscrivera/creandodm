@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { messages, rules, positions } from 'src/app/constants/home';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,14 +12,20 @@ export class HomeComponent implements OnInit {
   messages = messages;
   rules = rules;
   positions = positions;
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
 
   ngOnInit(): void {
   }
 
-  login() {
-    alert('login');
+  goToProfile() {
+    this._router.navigate(['/profile']);
+  }
+
+  goToTicket() {
+    this._router.navigate(['/ticket']);
   }
 
 }
