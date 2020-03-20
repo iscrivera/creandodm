@@ -1,5 +1,5 @@
 <div class="home-container">
-    <div class="col-top top">
+    <div class="col-top top" id="top">
         <div class="col-logos logos">
             <img class="img-logos" src="assets/images/logos.png" />
         </div>
@@ -24,7 +24,8 @@
                 <div class="col-l-slogan">
                 </div>
                 <div class="col-c-slogan">
-                    <span class="subtitle">Al comprar productos Ruffles&reg; edición especial NFL en tiendas OXXO&reg;, deberás ingresar tus
+                    <span class="subtitle">Al comprar productos Ruffles&reg; edición especial NFL en tiendas OXXO&reg;,
+                        deberás ingresar tus
                         tickets.</span>
                 </div>
                 <div class="col-r-slogan">
@@ -35,19 +36,99 @@
                 <div class="col-l-slogan">
                 </div>
                 <div class="col-c-slogan">
-                    <div class="col-middle right"><button class="btn-secondary" (click)="login()">Ingresar Ticket</button></div>
-                    <div class="col-middle left"><button class="btn-primary" (click)="login()">Descure Cómo</button></div>
+                    <div class="col-middle right"><button class="btn-secondary" (click)="login()">Ingresar
+                            Ticket</button></div>
+                    <div class="col-middle left"><button class="btn-primary" (click)="login()">Descubre Cómo</button>
+                    </div>
                 </div>
-                <div class="col-r-logos2">
-                    <img class="img-logos2" src="assets/images/logos2.png" />
+                <div class="col-r-logosd">
+                    <img class="img-logosd" src="assets/images/logos2.png" />
                 </div>
             </div>
         </div>
-        <div class="col-pet pet ">
+        <div class="col-pet pet">
             <img class="img-pet" src="assets/images/ruffilio_1.png" />
         </div>
     </div>
-    <div class="col-mecanica mecanica"></div>
-    <div class="col-ranking ranking"></div>
-    <div class="col-footer"></div>
+    <div class="col-mecanica mecanicabg" ></div>
+    <div class="col-mecanica mecanica" >
+        <div class="col-m-title" id="mecanica">
+            <img class="img-m-title" src="assets/images/mecanica.svg" />
+        </div>
+        <div class="col-m-rules">
+            <div class="col-s" *ngFor="let rule of rules">
+                <div class="m-number">{{rule.id}}</div>
+                <div class="m-rule" id="rule"><span [innerHTML]="rule.description"></span></div>
+            </div>
+        </div>
+        <div class="col-m-bolsas">
+            <img class="img-m-bolsas" src="assets/images/bolsas.png" />
+        </div>
+        <div class="col-m-winners">{{messages.winners}}</div>
+        <div class="up">
+            <a href="#top">
+                <img class="img-up" src="assets/images/subir.svg" />
+            </a>
+        </div>
+        <div class="col-m-btn">
+            <button class="btn-secondary" (click)="login()">Ingresar Ticket</button>
+        </div>
+    </div>
+
+    <div class="col-ranking rankingbg">
+
+    </div>
+    <div class="col-ranking ranking">
+        <div class="col-r-title">
+            <img class="img-r-title" src="assets/images/top.svg" />
+        </div>
+        <div class="col-r-subtitle">
+            {{messages.ranking.subtitule}}
+        </div>
+        <div class="col-r-option">
+            <div class="button b2" id="button-10">
+                <input type="checkbox" class="checkbox">
+                <div class="knobs">
+                    <span>Listado</span>
+                </div>
+                <div class="layer"></div>
+            </div>
+        </div>
+        <div class="col-r-day">
+            <div class="col-r-day-l">
+                <button class="btn-l" disabled>←</button>
+            </div>
+            <div class="col-r-day-d">
+                <div class="col-r-day-e">DÍA 01</div>
+                <div class="col-r-day-f">Lunes 28 de junio</div>
+            </div>
+            <div class="col-r-day-r">
+                <button class="btn-r">→</button>
+            </div>
+        </div>
+        <div class="col-r-table">
+            <div class="header-l">Posición</div>
+            <div class="header-r">Usuario</div>
+            <div class="content-c" *ngFor="let position of positions">
+                <div class="content-l">{{position.id}}</div>
+                <div class="content-r">{{position.usuario}}</div>
+            </div>
+        </div>
+        <div class="col-r-page">
+            <div class="col-r page-l">
+                <button class="btn-back" (click)="login()">Anterior</button>
+            </div>
+            <div class="col-r page-c">1 2 3 4 5 ...</div>
+            <div class="col-r page-r">
+                <button class="btn-oro" (click)="login()">Siguiente</button>
+            </div>
+        </div>
+        <div class="up">
+            <a href="#mecanica">
+                <img class="img-up" src="assets/images/subir.svg" />
+            </a>
+        </div>
+        <div class="col-r-footer">{{messages.ranking.footer}}</div>
+    </div>
+    <div class="col-footer">{{messages.footer.f1}} <br> {{messages.footer.f2}}</div>
 </div>

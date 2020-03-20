@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { messages } from 'src/app/constants/home';
+import { messages, rules, positions } from 'src/app/constants/home';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +9,8 @@ import { messages } from 'src/app/constants/home';
 export class HomeComponent implements OnInit {
 
   messages = messages;
+  rules = rules;
+  positions = positions;
   constructor() { }
 
 
