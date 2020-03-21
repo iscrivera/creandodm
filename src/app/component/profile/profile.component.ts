@@ -1,26 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { user, profile } from 'src/app/constants/profile';
+import { user, profile, monthNames } from 'src/app/constants/profile';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit, AfterViewInit {
+
 
   user = user;
   profile = profile;
+  now : string;
   constructor(
     private _router: Router
   ) { }
 
-  ngOnInit(): void {
-    this.initCollapsible();
-  }
-
-  initCollapsible(){
-    var coll = document.getElementsByClassName("collap");
+  ngAfterViewInit() {
+    var coll = document.getElementsByClassName("collap-ticket");
     var i;
 
     for (i = 0; i < coll.length; i++) {
@@ -36,7 +34,19 @@ export class ProfileComponent implements OnInit {
     }
   }
 
+  ngOnInit(): void {
+    var today = new Date();
+    var dd = today.getDate();
+    var yyyy = today.getFullYear();
+    var mm = monthNames[today.getMonth()];
+    this.now = 'Al '+ dd +' de '+ mm + ' a las '+ today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+  }
+
   goToHome() {
     this._router.navigate(['/home']);
+  }
+
+  goToTicket() {
+    this._router.navigate(['/ticket']);
   }
 }

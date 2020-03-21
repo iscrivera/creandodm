@@ -17,20 +17,27 @@
         <div class="col-n-ticket">{{profile.nticket}}</div>
         <div class="col-l-tickets">
             <div class="ticket" *ngFor="let ticket of user.tickets">
-                <button class="collap">{{ticket.number}}</button>
-                <div class="cont">
+                <button class="collapsible collap-ticket">{{ticket.number}}</button>
+                <div class="content">
                     <div class="date">
-                        <div>Fecha y hora de ingreso</div>
-                        <div>{{ticket.date}}</div>
+                        <div class="tit">Fecha y hora de ingreso</div>
+                        <div class="stit">{{ticket.date}}</div>
                     </div>
                     <div class="status">
-                        <div>Estatus</div>
+                        <div class="tit">Estatus</div>
                         <div class="status-{{ticket.status}}">{{ticket.statusd}}</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-position"></div>
-    <div class="col-buttons"></div>
+    <div class="col-position">
+        <div class="tit">{{profile.pos.tit}}</div>
+        <div class="stit">{{now}}</div>
+        <div class="num">{{user.pos}}</div>
+    </div>
+    <div class="col-buttons">
+        <button class="btn-primary init" (click)="goToHome()">Ir al inicio</button>
+        <button class="btn-secondary ticket" (click)="goToTicket()">Ingresar Ticket</button>
+    </div>
 </div>

@@ -1,5 +1,6 @@
 export const user = {
     name: `José Villanueva`,
+    pos: 40,
     tickets: [
         {
             number: '0123 4567 8901 2345',
@@ -47,7 +48,14 @@ export const user = {
 }
 
 export const profile = {
-    subtitle : 'Consulta el estatus de tus tickets y en que lugar del top de participación te encuentras.',
-    yticket:'Tus tickets',
-    nticket:'No. de Tickets'
+    subtitle: 'Consulta el estatus de tus tickets y en que lugar del top de participación te encuentras.',
+    yticket: 'Tus tickets',
+    nticket: 'No. de Tickets',
+    pos: {
+        tit: 'Tu posición en el top:'
+    }
 }
+
+export const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+]

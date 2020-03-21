@@ -21,6 +21,17 @@
     font-family: EndzoneSans-Medium;
   }
 
+  .btn-primary {
+    border-radius: 20px;
+    display: block;
+    background-color: #e6aa29;
+    color: #fff;
+    border: none;
+    padding: 4% 7% 4% 7%;
+    font-size: 3vw;
+    font-family: EndzoneSans-Medium;
+  }
+
   .oro {
     color: #e6aa29;
   }
@@ -65,12 +76,53 @@
 
     .col-n-ticket {
       font-family: EndzoneSans-Medium;
+      color: #fff;
     }
 
     .col-l-tickets {
+      height: 50vh;
+      overflow: auto;
       .ticket {
-        margin-bottom: 1vw;
+        margin-bottom: 1.5vw;
       }
+    }
+  }
+
+  .col-position {
+    text-align: center;
+    .tit {
+      font-family: EndzoneSans-Medium;
+      color: #fff;
+      font-size: 5vw;
+      margin-bottom: 2vw;
+      text-transform: uppercase;
+    }
+
+    .stit {
+      font-family: EndzoneSans-Medium;
+      font-size: 3vw;
+      margin-bottom: 2vw;
+      color: #3bfd2f;
+    }
+
+    .num {
+      font-family: EndzoneSans-Bold;
+      color: #e6aa29;
+      font-size: 20vw;
+    }
+  }
+
+  .col-buttons {
+    text-align: center;
+    padding: 2vw 2vw 2vw 25vw;
+    .init {
+      width: 50%;
+      margin-bottom: 2vw;
+    }
+
+    .ticket {
+      width: 50%;
+      margin-bottom: 2vw;
     }
   }
 }
@@ -82,27 +134,27 @@
   width: 95%;
 }
 
-.collap {
-  background-color: #1f1f1f;
-  color: #979797;
+.collapsible {
+  background-color: #053505;
+  color: #fff;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
-  text-align: center;
+  text-align: left;
   outline: none;
   font-size: 15px;
   font-family: EndzoneSans-Medium;
 }
 
 .active,
-.collap:hover {
-  background-color: #051704;
+.collapsible:hover {
+  background-color: #053505;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.collap:after {
+.collapsible:after {
   content: "\02C5";
   color: #979797;
   font-weight: bold;
@@ -114,15 +166,57 @@
   content: "\02C4";
 }
 
-.cont {
+.content {
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #051704;
-  color: #979797;
+  background-color: #054006;
+  color: #fff;
   text-align: center;
   font-family: EndzoneSans-Medium;
+  margin-top: 0.5vw;
+
+  .date {
+    width: 50%;
+    float: left;
+
+    .tit {
+      font-size: 3.5vw;
+      margin: 3vw 0vw 3vw 0vw;
+    }
+
+    .stit {
+      font-size: 2.5vw;
+      margin: 3vw 0vw 3vw 0vw;
+    }
+  }
+
+  .status {
+    width: 50%;
+    float: left;
+    font-size: 2.5vw;
+
+    .tit {
+      font-size: 3.5vw;
+      margin: 3vw 0vw 3vw 0vw;
+    }
+
+    .status-1 {
+      margin: 3vw 0vw 3vw 0vw;
+      color: #3bfd2f;
+    }
+
+    .status-2 {
+      margin: 3vw 0vw 3vw 0vw;
+      color: #f76420;
+    }
+
+    .status-3 {
+      margin: 3vw 0vw 3vw 0vw;
+      color: #dd2429;
+    }
+  }
 }
 
 @media only screen and (min-width: 750px) {
